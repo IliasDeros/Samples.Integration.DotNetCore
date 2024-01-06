@@ -12,10 +12,6 @@ You will see how to:
 
 ## 1. Clone the repository
 Clone the repository or download the code to your local workstation.
-E.g. by using https:
-
-    git clone https://github.com/datadeckapi/quickstart
-    cd quickstart
 
 ## 2. Set up your environment
 You need to replace the values in the `DatadeckApiClient.cs` file with your own. We recommend using  your client id and **sandbox secret** to start with. For using a live secret, you will have to update the API host also. Get your client id and secrets from the [dashboard](https://app.datadeck.co/api-keys).
