@@ -41,7 +41,7 @@ There is a page available on the sample website for showing how you can use the 
 ## 4. Digging into the code
 
 ### DatadeckApiClient.cs
-This is the backend service for communicating with the Datadeck API. You should be using the client id associated to the *Team* you want to collect credentials for. You should also be using the secret corresponding to the Datadeck environment you want to work on (sandbox, development or live).
+This is the backend service for communicating with the Datadeck API. You should be using the client id associated to the *Team* you want to collect credentials for. You should also be using the secret corresponding to the Datadeck environment you want to work on (sandbox, development or production).
 
 Keep in mind: Requests that are using your client id and secret must be made exclusively from the backend and not directly from the frontend, in order to not expose your sensitive keys publicly.
 
