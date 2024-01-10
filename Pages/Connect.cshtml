@@ -41,22 +41,34 @@
         })(window);
 
         function exchangePublicToken({ public_token }) {
+            this.isSuccess = true
+
             // Call the backend and send the public token that was gotten from the Link session
             $.ajax({
                 type: 'POST',
                 url: "/Connect",
                 data: { public_token },
-                success: () => window.location.href = "/Thanks",
+                success: () => ,
                 headers:
                 {
                     // This is only required by ASP.NET Razor pages
                     "RequestVerificationToken": "@AntiXsrfRequestToken"
                 }
             });
+            const isSuccess = !this.demo_public_token;
+        }
+
+        function thankRedirect() {
+            if (!this.isSuccess) {
+              return;
+            }
+
+            window.location.href = window.location.href = "/Thanks"
         }
 
         DatadeckSample.startLinkSession({
-            onSuccess: exchangePublicToken
+            onExit: thankRedirect,
+            onSuccess: exchangePublicToken,
         });
     </script>
 }
